@@ -23,10 +23,14 @@
       <legend>Curso e orientação</legend>
 
       <label>Licenciatura em *</label>
-      <input id="curso" required placeholder="Pedagogia" />
+      <select id="curso" required>
+        <option value="">Selecione</option>
+        <option value="Pedagogia">Pedagogia</option>
+        <option value="Letras">Letras</option>
+      </select>
 
       <label>Professor(a) orientador(a) no IFSP *</label>
-      <input id="orientador" required />
+      <input id="orientador" data-text-only="true" required />
 
       <label>E-mail do(a) orientador(a) *</label>
       <input id="emailOrientador" required type="email" placeholder="nome@ifsp.edu.br" />
@@ -48,19 +52,28 @@
       <input id="cepUnidade" required placeholder="00000-000" maxlength="9" data-mask="cep" />
 
       <label>Bairro *</label>
-      <input id="bairroUnidade" required />
+      <input id="bairroUnidade" data-text-only="true" required />
 
       <label>Cidade *</label>
-      <input id="cidadeUnidade" required />
+      <input id="cidadeUnidade" data-text-only="true" required />
 
       <label>Estado *</label>
-      <input id="estadoUnidade" required value="SP" maxlength="2" />
+      <select id="estadoUnidade" required>
+        <option value="SP" selected>SP</option>
+        <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option>
+        <option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option>
+        <option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+        <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option>
+        <option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option>
+        <option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+        <option value="SE">SE</option><option value="TO">TO</option>
+      </select>
 
       <label>Representante legal *</label>
-      <input id="representante" required />
+      <input id="representante" data-text-only="true" required />
 
       <label>Cargo do representante legal *</label>
-      <input id="cargoRepresentante" required />
+      <input id="cargoRepresentante" data-text-only="true" required />
 
       <label>Telefone da unidade *</label>
       <input id="telefoneUnidade" required placeholder="(15) 0000-0000" data-mask="telefone" />
@@ -73,10 +86,10 @@
       <legend>Supervisor(a) da unidade concedente</legend>
 
       <label>Nome *</label>
-      <input id="supervisor" required />
+      <input id="supervisor" data-text-only="true" required />
 
       <label>Função *</label>
-      <input id="funcaoSupervisor" required />
+      <input id="funcaoSupervisor" data-text-only="true" required />
 
       <label>Telefone *</label>
       <input id="telefoneSupervisor" required placeholder="(15) 0000-0000" data-mask="telefone" />
@@ -89,16 +102,21 @@
       <legend>Estudante / estagiário(a)</legend>
 
       <label>Nome *</label>
-      <input id="nomeEstudante" required />
+      <input id="nomeEstudante" data-text-only="true" required />
 
       <label>Período do curso *</label>
-      <input id="periodoCurso" required placeholder="Matutino / Vespertino / Noturno" />
+      <select id="periodoCurso" required>
+        <option value="">Selecione</option>
+        <option value="Matutino">Matutino</option>
+        <option value="Vespertino">Vespertino</option>
+        <option value="Noturno">Noturno</option>
+      </select>
 
       <label>Prontuário *</label>
       <input id="prontuario" required placeholder="SO0000000" />
 
-      <label>RG *</label>
-      <input id="rg" required placeholder="00.000.000-0" maxlength="12" data-mask="rg" />
+      <label>RG</label>
+      <input id="rg" placeholder="00.000.000-0" maxlength="12" data-mask="rg" />
 
       <label>CPF *</label>
       <input id="cpf" required placeholder="000.000.000-00" maxlength="14" data-mask="cpf" />
@@ -113,13 +131,22 @@
       <input id="cepEstudante" required placeholder="00000-000" maxlength="9" data-mask="cep" />
 
       <label>Bairro *</label>
-      <input id="bairroEstudante" required />
+      <input id="bairroEstudante" data-text-only="true" required />
 
       <label>Cidade *</label>
-      <input id="cidadeEstudante" required />
+      <input id="cidadeEstudante" data-text-only="true" required />
 
       <label>Estado *</label>
-      <input id="estadoEstudante" required maxlength="2" value="SP" />
+      <select id="estadoEstudante" required>
+        <option value="SP" selected>SP</option>
+        <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option>
+        <option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option>
+        <option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+        <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option>
+        <option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option>
+        <option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+        <option value="SE">SE</option><option value="TO">TO</option>
+      </select>
 
       <label>Celular *</label>
       <input id="celularEstudante" required placeholder="(15) 90000-0000" data-mask="telefone" />
@@ -133,9 +160,7 @@
 
       <label>Tipo de estágio *</label>
       <select id="tipoEstagio" required>
-        <option value="">Selecione</option>
-        <option value="Obrigatório">Obrigatório</option>
-        <option value="Não Obrigatório">Não Obrigatório</option>
+        <option value="Obrigatório" selected>Obrigatório</option>
       </select>
 
       <label>Pessoa com deficiência? *</label>
@@ -146,7 +171,7 @@
       </select>
 
       <label>Especificação da deficiência, se houver</label>
-      <input id="pcdEspecificar" />
+      <input id="pcdEspecificar" data-text-only="true" />
 
       <label>Data inicial do estágio *</label>
       <input id="dataInicio" required placeholder="dd/mm/aaaa" maxlength="10" data-mask="data" />
@@ -155,7 +180,15 @@
       <input id="dataFim" required placeholder="dd/mm/aaaa" maxlength="10" data-mask="data" />
 
       <label>Dias da semana *</label>
-      <input id="diasSemana" required placeholder="segundas e quartas-feiras" />
+      <details class="lista-dias" open>
+        <summary>Selecionar dias da semana</summary>
+        <label class="check-dia"><input type="checkbox" name="diasSemana" value="segunda-feira"> segunda-feira</label>
+        <label class="check-dia"><input type="checkbox" name="diasSemana" value="terça-feira"> terça-feira</label>
+        <label class="check-dia"><input type="checkbox" name="diasSemana" value="quarta-feira"> quarta-feira</label>
+        <label class="check-dia"><input type="checkbox" name="diasSemana" value="quinta-feira"> quinta-feira</label>
+        <label class="check-dia"><input type="checkbox" name="diasSemana" value="sexta-feira"> sexta-feira</label>
+        <label class="check-dia"><input type="checkbox" name="diasSemana" value="sábado"> sábado</label>
+      </details>
 
       <label>Período do estágio *</label>
       <select id="periodoEstagio" required>
@@ -170,6 +203,13 @@
 
       <label>Horário de término *</label>
       <input id="horaFim" required placeholder="00:00" maxlength="5" data-mask="hora" />
+
+      <label>O horário do estágio coincide com horário de aula? *</label>
+      <select id="conflitoAula" required>
+        <option value="">Selecione</option>
+        <option value="Não">Não</option>
+        <option value="Sim">Sim</option>
+      </select>
     </fieldset>
 
 
@@ -210,40 +250,36 @@
   <option value="8º semestre">8º semestre</option>
 </select>
 
-      <label>Carga horária *</label>
-      <input id="cargaHoraria" required placeholder="110h" />
+      <label>Carga horária (h) *</label>
+      <input id="cargaHoraria" required type="number" min="1" step="1" placeholder="110" />
 
       <label>Síntese das atividades a serem desenvolvidas *</label>
       <textarea id="sinteseAtividades" rows="8" required placeholder="Descreva as atividades previstas"></textarea>
 
-      <label>Total da carga horária desta folha *</label>
-      <input id="totalCargaHoraria" required placeholder="110 horas" />
     </fieldset>
 
     <fieldset>
-      <legend>Data do documento</legend>
+      <legend>Documento válido a partir de</legend>
 
-      <label>Dia *</label>
-      <input id="diaDocumento" required placeholder="19" maxlength="2" />
-
-      <label>Mês por extenso *</label>
-      <input id="mesDocumento" required placeholder="março" />
-
-      <label>Ano *</label>
-      <input id="anoDocumento" required placeholder="2026" maxlength="4" />
+      <label>Data copiada automaticamente da data inicial do estágio *</label>
+      <input id="dataDocumento" required disabled placeholder="dd/mm/aaaa" />
     </fieldset>
 
     <fieldset>
       <legend>Assinaturas adicionais</legend>
 
       <label>Coordenador(a) do Curso *</label>
-      <input id="coordenadorCurso" required />
+      <input id="coordenadorCurso" data-text-only="true" required />
 
       <label>Responsável pelo setor de Estágios no campus *</label>
-      <input id="responsavelEstagios" required value="Andrezza Campos Moretti" />
+      <input id="responsavelEstagios" required value="Andressa Rodrigues" disabled />
 
       <label>Coordenador(a) Institucional de Estágios *</label>
-      <input id="coordenadorInstitucional" required />
+      <select id="coordenadorInstitucional" required>
+        <option value="">Selecione</option>
+        <option value="Andrezza Campos Moretti">Andrezza Campos Moretti</option>
+        <option value="Arnaldo Rodrigues de Lima">Arnaldo Rodrigues de Lima</option>
+      </select>
     </fieldset>
 
     <div id="mensagens" class="mensagens" aria-live="polite"></div>
@@ -332,8 +368,6 @@
 
     <p>E, por estarem de acordo com as condições deste Termo, as partes o assinam em três vias de igual teor e forma, para que surta seus efeitos legais.</p>
 
-    <p>Sorocaba, <span data-out="diaDocumento">[preencher dia]</span> de <span data-out="mesDocumento">[preencher mês]</span> de <span data-out="anoDocumento">[preencher ano]</span>.</p>
-
 <div class="quebra-pagina"></div>
 
 <h2 class="titulo-plano">PLANO DE ATIVIDADES</h2>
@@ -363,7 +397,7 @@ das
   <thead>
     <tr>
       <th>PERÍODO DO CURSO</th>
-      <th>CARGA HORÁRIA</th>
+      <th>CARGA HORÁRIA (h)</th>
       <th>SÍNTESE DAS ATIVIDADES</th>
     </tr>
   </thead>
@@ -377,15 +411,6 @@ das
       </td>
     </tr>
   </tbody>
-
-  <tfoot>
-    <tr>
-      <td><strong>Total Carga Horária desta folha:</strong></td>
-      <td colspan="2">
-        <span data-out="totalCargaHoraria"></span>
-      </td>
-    </tr>
-  </tfoot>
 </table>
 
  
@@ -394,12 +419,12 @@ das
     <div class="assinaturas">
       <div>_______________________________________<br><span data-out="supervisor">Supervisor(a)</span><br>Supervisor(a) da Unidade Concedente</div>
       <div>_______________________________________<br><span data-out="representante">Representante Legal</span><br>Representante Legal da Unidade Concedente</div>
-      <div>_______________________________________<br><span data-out="nomeEstudante">Estudante/Estagiário(a)</span></div>
+      <div>_______________________________________<br><span data-out="nomeEstudante">Estudante/Estagiário(a)</span><br>Estudante/Estagiário(a)</div>
       <div>_______________________________________<br><span data-out="orientador">Orientador(a)</span><br>Orientador(a) de estágio</div>
       <div>_______________________________________<br>Denilson Camargo Mirim<br>Diretor Geral do IFSP - Câmpus Sorocaba</div>
-      <div>_______________________________________<br>Carla Ariela Rios Villaronga<br>Coordenador(a) do Curso</div>
-      <div>_______________________________________<br><span data-out="responsavelEstagios">Responsável pelo setor que cuida dos Estágios no campus</span></div>
-      <div>_______________________________________<br><span data-out="coordenadorInstitucional">Coordenador(a) Institucional de Estágios</span></div>
+      <div>_______________________________________<br><span data-out="coordenadorCurso">Coordenador(a) do Curso</span><br>Coordenador(a) do Curso</div>
+      <div>_______________________________________<br><span data-out="responsavelEstagios">Andressa Rodrigues</span><br>Responsável pelo setor de Estágios</div>
+      <div>_______________________________________<br><span data-out="coordenadorInstitucional">Coordenador(a) Institucional de Estágios</span><br>Coordenador(a) Institucional de Estágios</div>
     </div>
 
     <p class="nota-final">Documento assinado eletronicamente Conforme Art. 6º, Inciso - I, do Regulamento de Estágio – Portaria 1.204, de 11/05/2011</p>

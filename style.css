@@ -10,7 +10,7 @@ body {
 }
 
 .topo {
-  background: #8a0d0d;
+  background: #3D9C3C;
   color: #fff;
   text-align: center;
   padding: 18px 24px;
@@ -18,7 +18,7 @@ body {
 
 .topo h1 {
   margin: 0 0 6px;
-  font-size: 22px;
+  font-size: clamp(18px, 4vw, 26px);
 }
 
 .topo p {
@@ -71,7 +71,7 @@ fieldset {
 
 legend {
   font-weight: bold;
-  color: #8a0d0d;
+  color: #3D9C3C;
 }
 
 label {
@@ -101,7 +101,7 @@ button {
   margin-top: 10px;
   border: 0;
   border-radius: 4px;
-  background: #8a0d0d;
+  background: #3D9C3C;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -288,5 +288,91 @@ button.secundario {
 @media print {
   .quebra-pagina {
     page-break-before: always;
+  }
+}
+
+textarea.erro {
+  border-color: #b00020;
+  background: #fff3f3;
+}
+
+.lista-dias {
+  margin-top: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.lista-dias.erro {
+  border-color: #b00020;
+  background: #fff3f3;
+}
+
+.lista-dias summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.check-dia {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+.check-dia input {
+  width: auto;
+  margin: 0;
+}
+
+input:disabled, select:disabled {
+  background: #eeeeee;
+  color: #555;
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px) {
+  .topo {
+    padding: 14px 12px;
+  }
+
+  .topo h1 {
+    line-height: 1.2;
+  }
+
+  .topo p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .formulario {
+    padding: 14px;
+  }
+
+  .documento {
+    width: 100%;
+    min-width: 0;
+    padding: 16px;
+    font-size: 10.5pt;
+    overflow-wrap: anywhere;
+  }
+
+  .cabecalho-documento h2 {
+    font-size: clamp(11pt, 3.6vw, 12.5pt);
+  }
+
+  .assinaturas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tabela-plano {
+    display: block;
+    overflow-x: auto;
   }
 }
